@@ -4,23 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="output.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="script.js" defer></script>
     <title>Document</title>
 </head>
 <body>
-    <nav class="container mx-auto p-6 rounded-">
-        <div class="flex item-center justify-between">
-            <div >
-                <img src="images/logo-light.png" alt="Tailwind logo" width="200px">
-            </div>
-            <div class="hidden md:flex items-center space-x-6 text-red">
-                <a href="#" class="nav-link">Portfolio</a>
-                <a href="#" class="nav-link">About</a>
-                <a href="#" class="nav-link">Contact</a>
-                <a href="#" class="nav-link">Social</a>
-                <a href="#" class="nav-link px-3 py-2 bg-orange-500 text-white rounded-full hover:bg-slate-900 hover:text-white">Call Me</a>
-            </div>
+<nav class="container mx-auto p-6 relative">
+    <div class="flex items-center justify-between"> 
+        <div>
+            <img src="./dist/images/logo-light.png" alt="Tailwind Logo" width="200px">
         </div>
-    </nav>
+        
+
+        <div class="hidden md:flex space-x-6 items-center">
+            <a href="#" class="text-slate-900 hover:text-orange-500 transition-all ease-in-out">Portfolio</a>
+            <a href="#" class="text-slate-900 hover:text-orange-500 transition-all ease-in-out">About</a>
+            <a href="#" class="text-slate-900 hover:text-orange-500 transition-all ease-in-out">Contact</a>
+            <a href="#" class="text-slate-900 hover:text-orange-500 transition-all ease-in-out">Social</a>
+            <a href="#" class="py-2 px-6 rounded-full text-white bg-orange-500 hover:bg-slate-900 transition-all ease-in-out">Call Me</a>
+        </div>
+
+
+        <button id="mobile-btn" class="md:hidden text-slate-900 focus:outline-none">
+            <i class="ri-menu-line text-2xl"></i>
+        </button>
+    </div>
+
+    <div class="md:hidden">
+        <div id="mobile-menu" class="hidden absolute flex-col items-center space-y-4 bg-gray-50 py-8 left-6 right-6 top-20 drop-shadow-lg border border-gray-300 rounded-xl z-50">
+            <a href="#" class="hover:text-orange-500 transition-colors">Portfolio</a>
+            <a href="#" class="hover:text-orange-500 transition-colors">About</a>
+            <a href="#" class="hover:text-orange-500 transition-colors">Contact</a>
+            <a href="#" class="hover:text-orange-500 transition-colors">Social</a>
+            <a href="#" class="py-2 px-6 rounded-full text-white bg-orange-500 hover:bg-slate-900 transition-all ease-in-out">Call Me</a>
+        </div>
+    </div>
+</nav>
 
 <section id="hero">
         <div class="container mt-5 mx-auto px-6 flex flex-col-reverse md:flex-row">
